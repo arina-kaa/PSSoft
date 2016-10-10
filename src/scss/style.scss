@@ -1,0 +1,225 @@
+@import "../../bower_components/foundation-sites/dist/foundation";
+@import "config";
+
+*
+{
+  margin: 0;
+}
+
+.overall-container
+{
+  width: 100%;
+  text-align: center;
+}
+
+.container
+{
+  max-width: 920px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#page-header
+{
+  padding: 25px 0 0 10px;
+
+  .link
+  {
+    max-width: 340px;
+    float: right;
+    text-align: left;
+    padding: 20px 0 0 10px;
+    color: $text-color-z;
+
+    strong
+    {
+      font-size: 18px;
+    }
+
+    i
+    {
+      font-size: 14px;
+    }
+  }
+
+  .main-menu-color
+  {
+      color: $text-color;
+
+    &.arrow-menu
+    {
+      position: relative;
+    }
+
+    &.arrow-menu:after
+    {
+      content:'';
+      background: url("../images/arrow-down.png") no-repeat;
+      width: 11px;
+      height: 6px;
+      position: absolute;
+      right: -1px;
+      display: inline-block;
+      border: none;
+    }
+  }
+}
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a::after
+{
+  display: none;
+}
+
+.is-dropdown-submenu
+{
+  min-width: 120px;
+  text-align: left;
+}
+
+.drop-menu:hover
+{
+  background-color: #f5f4f4;
+}
+
+.title
+{
+  color: $text-color-z;
+  margin: 100px 0 50px;
+  text-align: left;
+
+  h1
+  {
+    margin: 0;
+    font-size: 45px;
+  }
+
+  p
+  {
+    color: $text-color;
+    font-size: 20px;
+    max-width: 690px;
+  }
+}
+
+.companies
+{
+  .thumbnail
+  {
+    height: 330px;
+    margin-bottom: 40px;
+    border-radius: 3px;
+
+    img
+    {
+      position: absolute;
+      bottom: 155px;
+    }
+
+    .img-ispring
+    {
+      position: absolute;
+      bottom: 145px;
+    }
+
+    .img-bottom
+    {
+      position: absolute;
+      bottom: 130px;
+    }
+
+    .thumbnail-p
+    {
+      margin: 110px 0;
+      padding: 0 25px;
+      color: $text-color;
+      font-size: 16px;
+      max-width: 260px;
+      text-align: left;
+      position: relative;
+
+      &.bottom
+      {
+        margin: 130px 0;
+      }
+    }
+  }
+}
+
+.button
+{
+  color: $button;
+  background: none;
+  border: 2px solid $button;
+  border-radius: 30px;
+  margin: 40px 0;
+
+  a
+  {
+    color: $button;
+  }
+}
+
+hr
+{
+  color: #eaf0f3;
+  size: 1px;
+  max-width: 100%;
+}
+
+.system
+{
+  .thumbnail
+  {
+    img
+    {
+      position: absolute;
+      bottom: 140px;
+    }
+
+    .img-infotech
+    {
+      position: absolute;
+      bottom: 115px;
+    }
+
+    .name-infotech
+    {
+      position: absolute;
+      bottom: 150px;
+    }
+  }
+}
+
+.volgatech
+{
+  .thumbnail
+  {
+    height: 330px;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 3px;
+
+    .volgatech-p-header
+    {
+      line-height: initial;
+      padding: 0 25px;
+      color: $text-color-z;
+      font-size: 26px;
+      max-width: 500px;
+      text-align: left;
+      text-decoration: underline;
+    }
+
+    .volgatech-p
+    {
+      padding: 0 25px;
+      color: $text-color;
+      font-size: 16px;
+      max-width: 500px;
+      text-align: left;
+    }
+  }
+}
+
+
