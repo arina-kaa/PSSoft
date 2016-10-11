@@ -6,6 +6,11 @@
   margin: 0;
 }
 
+.clear
+{
+  clear: both;
+}
+
 .overall-container
 {
   width: 100%;
@@ -82,10 +87,10 @@
   background-color: #f5f4f4;
 }
 
-.title
+.main-title,.title
 {
   color: $text-color-z;
-  margin: 100px 0 50px;
+  margin: 100px auto 50px;
   text-align: left;
 
   h1
@@ -102,6 +107,17 @@
   }
 }
 
+.title
+{
+  margin: 60px auto 50px;
+
+  p
+  {
+    font-size: 16px;
+    max-width: 800px;
+  }
+}
+
 .companies
 {
   .thumbnail
@@ -109,6 +125,7 @@
     height: 330px;
     margin-bottom: 40px;
     border-radius: 3px;
+    position: relative;
 
     img
     {
@@ -142,6 +159,16 @@
       {
         margin: 130px 0;
       }
+    }
+
+    a
+    {
+      position: absolute;
+      display: block;
+      height: 103%;
+      width: 103%;
+      left: -4px;
+      top: -4px;
     }
   }
 }
@@ -197,27 +224,48 @@ hr
   {
     height: 330px;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     border-radius: 3px;
+    position: relative;
+
+    img
+    {
+      display: block;
+      float: left;
+      padding: 8% 6%;
+    }
+
+    div
+    {
+      padding: 8% 0 0 30%;
+    }
 
     .volgatech-p-header
     {
       line-height: initial;
-      padding: 0 25px;
       color: $text-color-z;
       font-size: 26px;
-      max-width: 500px;
+      max-width: 450px;
       text-align: left;
       text-decoration: underline;
     }
 
     .volgatech-p
     {
-      padding: 0 25px;
       color: $text-color;
       font-size: 16px;
-      max-width: 500px;
+      max-width: 450px;
       text-align: left;
+    }
+
+    a
+    {
+      position: absolute;
+      display: block;
+      height: 103%;
+      width: 101%;
+      left: -4px;
+      top: -4px;
     }
   }
 }
