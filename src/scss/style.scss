@@ -33,7 +33,7 @@
   {
     position: relative;
 
-    a
+    .logo-link
     {
       position: absolute;
       left: 15px;
@@ -43,7 +43,7 @@
     }
   }
 
-  .link
+  .link-text
   {
     max-width: 340px;
     float: right;
@@ -51,43 +51,39 @@
     padding: 20px 0 0 10px;
     color: $text-color-z;
 
-    strong
+    .header
     {
       font-size: 18px;
+      font-weight: bold;
     }
 
-    i
+    .content
     {
       font-size: 14px;
+      font-style: italic;
     }
   }
 
-  .main-menu-color
+  .main-menu
   {
+    margin-top: 25px;
+
+    .main-menu-color
+    {
       color: $text-color;
-
-    &.arrow-menu
-    {
-      position: relative;
-    }
-
-    &.arrow-menu:after
-    {
-      content:'';
-      background: url("../images/arrow-down.png") no-repeat;
-      width: 11px;
-      height: 6px;
-      position: absolute;
-      right: -1px;
-      display: inline-block;
-      border: none;
     }
   }
 }
 
 .dropdown.menu>li.is-dropdown-submenu-parent>a::after
 {
-  display: none;
+  content:'';
+  background: url("../images/arrow-down.png") no-repeat;
+  width: 11px;
+  height: 6px;
+  position: absolute;
+  display: inline-block;
+  border: none;
 }
 
 .is-dropdown-submenu
@@ -107,13 +103,14 @@
   margin: 100px auto 50px;
   text-align: left;
 
-  h1
+  .main-title-header
   {
     margin: 0;
     font-size: 45px;
+    font-weight: bold;
   }
 
-  p
+  .main-title-content
   {
     color: $text-color;
     font-size: 20px;
@@ -125,17 +122,19 @@
 {
   margin: 40px auto 50px;
 
-  p
-  {
-    font-size: 16px;
-    max-width: 800px;
-  }
-
-  strong
+  .title-header
   {
     color: $text-color-z;
     margin: 0;
     font-size: 40px;
+    font-weight: bold;
+  }
+
+  .title-content
+  {
+    font-size: 16px;
+    max-width: 800px;
+    color: $text-color;
   }
 }
 
@@ -148,25 +147,25 @@
     border-radius: 3px;
     position: relative;
 
-    img
+    .logo-comp
     {
       position: absolute;
       bottom: 155px;
     }
 
-    .img-ispring
+    .logo-ispring
     {
       position: absolute;
       bottom: 145px;
     }
 
-    .img-bottom
+    .logo-bottom
     {
       position: absolute;
       bottom: 130px;
     }
 
-    .thumbnail-p
+    .thumbnail-text
     {
       margin: 110px 0;
       padding: 0 25px;
@@ -182,7 +181,7 @@
       }
     }
 
-    a
+    .link-comp
     {
       position: absolute;
       display: block;
@@ -202,13 +201,14 @@
   border-radius: 30px;
   margin: 40px 0;
 
-  a
+  .link-buttom
   {
     color: $button;
+    font-weight: bold;
   }
 }
 
-hr
+.line
 {
   color: #eaf0f3;
   size: 1px;
@@ -219,13 +219,13 @@ hr
 {
   .thumbnail
   {
-    img
+    .logo-system
     {
       position: absolute;
       bottom: 140px;
     }
 
-    .img-infotech
+    .logo-infotech
     {
       position: absolute;
       bottom: 115px;
@@ -248,19 +248,19 @@ hr
     border-radius: 3px;
     position: relative;
 
-    img
+    .logo-volgatech
     {
       display: block;
       float: left;
       padding: 8% 6%;
     }
 
-    div
+    .volgatech-text
     {
-      padding: 8% 0 0 30%;
+      padding: 7% 0 7% 30%;
     }
 
-    .volgatech-p-header
+    .volgatech-text-header
     {
       line-height: initial;
       color: $text-color-z;
@@ -270,7 +270,7 @@ hr
       text-decoration: underline;
     }
 
-    .volgatech-p
+    .volgatech-text-content
     {
       color: $text-color;
       font-size: 16px;
@@ -278,7 +278,7 @@ hr
       text-align: left;
     }
 
-    a
+    .link-volgatech
     {
       position: absolute;
       display: block;
@@ -319,6 +319,20 @@ hr
       font-style: italic;
       text-align: left;
       max-width: 280px;
+      height: 110px;
+    }
+
+    .smi-video
+    {
+      display: block;
+      width: 100%;
+
+      .video-picture
+      {
+        border-radius: 5px;
+        width: 95%;
+        float: left;
+      }
     }
   }
 
@@ -330,7 +344,7 @@ hr
 
 .contacts
 {
-  p
+  .title-content
   {
     max-width: 670px;
     margin: 0;
