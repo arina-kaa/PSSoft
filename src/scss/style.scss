@@ -145,40 +145,43 @@
     max-height: 330px;
     margin-bottom: 40px;
     border-radius: 3px;
-    position: relative;
 
     .logo-comp
     {
-      position: absolute;
-      bottom: 155px;
+      text-align: left;
+      margin: 60px 0 30px 0;
+      padding: 0 25px;
+
+      .ct-logo
+      {
+        float: left;
+      }
+
+      .ct-text
+      {
+        color: $text-color-z;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 1;
+        width: 110px;
+        margin: 0 0 0 70px;
+        padding: 10px 0 0 0;
+      }
     }
 
     .logo-ispring
     {
-      position: absolute;
-      bottom: 145px;
-    }
-
-    .logo-bottom
-    {
-      position: absolute;
-      bottom: 130px;
+      margin: 45px 0 20px 0;
     }
 
     .thumbnail-text
     {
-      margin: 110px 0;
+      margin: 0 0 110px 0;
       padding: 0 25px;
       color: $text-color;
       font-size: 16px;
       max-width: 260px;
       text-align: left;
-      position: relative;
-
-      &.bottom
-      {
-        margin: 130px 0;
-      }
     }
 
     .link-comp
@@ -221,20 +224,42 @@
   {
     .logo-system
     {
-      position: absolute;
-      bottom: 140px;
+      margin: 60px 0 20px;
+      text-align: left;
+      padding: 0 0 0 25px;
+
+      .inst-ps-logo
+      {
+        float: left;
+      }
+
+      .inst-ps-text
+      {
+        color: $text-color;
+        font-weight: bold;
+        font-size: 24px;
+        margin: 0 0 0 60px;
+        padding: 13px 0 0;
+        line-height: 1;
+
+        .inst-ps-text-red
+        {
+          color: $inst-ps-red;
+        }
+      }
     }
 
     .logo-infotech
     {
-      position: absolute;
-      bottom: 115px;
+      margin: 60px 0 15px;
     }
 
     .name-infotech
     {
-      position: absolute;
-      bottom: 150px;
+      color: $text-color;
+      font-size: 16px;
+      line-height: 1;
+      margin-bottom: 5px;
     }
   }
 }
@@ -324,23 +349,27 @@
 
     .smi-video
     {
-      display: block;
-      width: 100%;
       position: relative;
 
       .video-picture
       {
         border-radius: 5px;
-        margin: 15px 0 40px 0;
-        width: 95%;
-        float: left;
       }
 
       .play-icon
       {
         position: absolute;
-        right: 9%;
-        top: 165px;
+        right: 10px;
+        bottom: 10px;
+      }
+
+      .smi-link
+      {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
   }
