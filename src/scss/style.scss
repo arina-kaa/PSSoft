@@ -145,6 +145,7 @@
     max-height: 330px;
     margin-bottom: 40px;
     border-radius: 3px;
+    position: relative;
 
     .logo-comp
     {
@@ -222,6 +223,8 @@
 {
   .thumbnail
   {
+    position: relative;
+
     .logo-system
     {
       margin: 60px 0 20px;
@@ -260,6 +263,15 @@
       font-size: 16px;
       line-height: 1;
       margin-bottom: 5px;
+    }
+
+    .link-system
+    {
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: 103%;
+      height: 103%;
     }
   }
 }
