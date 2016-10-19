@@ -199,16 +199,29 @@
 
 .button
 {
-  color: $button;
+  color: $button-color;
   background: none;
-  border: 2px solid $button;
+  border: 2px solid $button-color;
   border-radius: 30px;
   margin: 40px 0;
+  width: 100%;
 
-  .link-button
+  &.button:hover,
+  &.button:focus
   {
-    color: $button;
+    background: $button-color;
+  }
+
+  &.link-button
+  {
+    color: $button-color;
     font-weight: bold;
+
+    &.link-button:hover,
+    &.link-button:focus
+    {
+      color: white;
+    }
   }
 }
 
@@ -247,7 +260,7 @@
 
         .inst-ps-text-red
         {
-          color: $inst-ps-red;
+          color: $inst-ps-red-color;
         }
       }
     }
@@ -334,7 +347,7 @@
     .header
     {
       padding: 8% 0 0;
-      color: $smi-z;
+      color: $smi-z-color;
       font-size: 22px;
       font-weight: bold;
       text-align: left;
@@ -343,7 +356,7 @@
 
     .smi-row
     {
-      background-color: $smi-row;
+      background-color: $smi-row-color;
       height: 2px;
       width: 95px;
       margin: 10px 0 15px;
@@ -356,12 +369,12 @@
       font-style: italic;
       text-align: left;
       max-width: 280px;
-      height: 110px;
     }
 
     .smi-video
     {
       position: relative;
+      margin-top: 15px;
 
       .video-picture
       {
@@ -382,6 +395,14 @@
         position: absolute;
         top: 0;
         left: 0;
+        color: transparent;
+
+        &.smi-link:hover,
+        &.smi-link:focus,
+        &.smi-link:active
+        {
+          color: transparent;
+        }
       }
     }
   }
@@ -390,6 +411,17 @@
   {
     margin: 40px 0 50px;
   }
+}
+
+.reveal-overlay
+{
+  background-color: rgba(255,255,255,.70);
+}
+
+.reveal
+{
+  outline: none;
+  border: none;
 }
 
 .contacts
@@ -405,11 +437,11 @@
   .contact-info
   {
     margin: 20px 0 0;
-    border-left: 2px $smi-row solid;
+    border-left: 2px $smi-row-color solid;
 
     .contact-info-header
     {
-      color: $smi-z;
+      color: $smi-z-color;
       padding: 0 0 5% 5%;
       font-size: 20px;
       font-weight: bold;
@@ -425,7 +457,7 @@
 
       .number
       {
-        color: $smi-z;
+        color: $smi-z-color;
         font-weight: bold;
       }
     }
@@ -444,7 +476,7 @@
 
 .footer
 {
-  background-color: $footer-bg;
+  background-color: $footer-bg-color;
   width: 100%;
 
   .footer-text
