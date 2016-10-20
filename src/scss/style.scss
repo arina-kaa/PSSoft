@@ -71,6 +71,7 @@
     .main-menu-color
     {
       color: $text-color;
+      outline: none;
     }
   }
 }
@@ -422,6 +423,13 @@
 {
   outline: none;
   border: none;
+
+  .close-button
+  {
+    outline: none;
+    right: 0.2rem;
+    top: 0;
+  }
 }
 
 .contacts
