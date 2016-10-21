@@ -147,6 +147,14 @@
     margin-bottom: 40px;
     border-radius: 3px;
     position: relative;
+    border: 0;
+    padding: 4px;
+
+    &:focus,
+    &:hover
+    {
+      box-shadow: 0 0 6px 1px rgba(124,133,149,.5);
+    }
 
     .logo-comp
     {
@@ -190,10 +198,10 @@
     {
       position: absolute;
       display: block;
-      height: 103%;
-      width: 103%;
-      left: -4px;
-      top: -4px;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
     }
   }
 }
@@ -238,6 +246,14 @@
   .thumbnail
   {
     position: relative;
+    border: 0;
+    padding: 4px;
+
+    &:focus,
+    &:hover
+    {
+      box-shadow: 0 0 6px 1px rgba(124,133,149,.5);
+    }
 
     .logo-system
     {
@@ -282,10 +298,10 @@
     .link-system
     {
       position: absolute;
-      top: -4px;
-      left: -4px;
-      width: 103%;
-      height: 103%;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -298,6 +314,12 @@
     margin-bottom: 60px;
     border-radius: 3px;
     position: relative;
+
+    &:focus,
+    &:hover
+    {
+      box-shadow: 0 0 6px 1px rgba(124,133,149,.5);
+    }
 
     .logo-volgatech
     {
@@ -412,6 +434,11 @@
   {
     margin: 40px 0 50px;
   }
+}
+
+.is-reveal-open
+{
+  padding-right: 17px;
 }
 
 .reveal-overlay
