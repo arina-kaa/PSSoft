@@ -1,8 +1,8 @@
 $(document).ready(function(){
     $(document).foundation();
-    SayHello();
+    InitHeadroom();
 });
 
-function SayHello(){
-    console.log('Hello!')
+function InitHeadroom(){
+    $("header").headroom();
 }

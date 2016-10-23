@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="overall-container">
-            <header id="page-header" class="page-header">
+            <header class="page-header">
                 <div class="row">
                     <div class="logo small-5 columns">
                         <div>
@@ -38,13 +38,14 @@
                             <li><a href="#" class="main-menu-color">В новостях</a></li>
                             <li><a href="#" class="main-menu-color">Контакты</a></li>
                         </ul>
+                        <div class="clear"></div>
                     </div>
                 </div>
             </header>
-        <div class="container">
+        <div class="first-container">
             <div class="row">
                 <div class="main-title small-12 columns">
-                    <h1 class="main-title-header">Ассоциация IT-компаний в Йошкар-Оле</h1>
+                    <h1 class="main-title-header">Ассоциация IT-компаний Йошкар-Олы</h1>
                     <p class="main-title-content">
                         Ведущие IT-компании города собираются под нашими знаменами,
                         чтобы развивать IT-индустрию республики.
@@ -343,7 +344,7 @@
                 <div class="column">
                     <div class="header">Следите за новостями в социальных сетях</div>
                     <div class="smi-row"></div>
-                    <script type="text/javascript" src="//vk.com/js/api/openapi.js?133"></script>
+                    <script type="text/javascript" src="http://vk.com/js/api/openapi.js?133"></script>
 
                     <!-- VK Widget -->
                     <div id="vk_groups"></div>
@@ -387,7 +388,11 @@
                                 424000, г. Йошкар-Ола, <br />
                                 ул. Вознесенская 110, 4 этаж<br />
                                 Телефон: <span class="number">(8362) 30-70-08</span><br />
-                                Электронная почта: <a href="#">info@institutps.ru</a>
+                                Электронная почта:
+                                <script type="text/javascript">
+                                    emailE = ('info' + '@' + 'institutps' + '.ru');
+                                    document.write('<a href="mailto:' + emailE + '">' + ' ' + emailE + '</a>');
+                                </script>
                             </div>
                             <div class="large-6 medium-6 small-5 columns">
                                 <a href="#" class="button link-button">Порядок вступления</a>

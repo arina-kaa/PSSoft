@@ -6,6 +6,13 @@
   margin: 0;
 }
 
+h1,
+h2,
+h3
+{
+  font-family: 'Roboto', sans-serif;
+}
+
 .clear
 {
   clear: both;
@@ -18,7 +25,8 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.container
+.container,
+.first-container
 {
   max-width: 920px;
   height: 100%;
@@ -26,9 +34,26 @@
   text-align: center;
 }
 
+.first-container
+{
+  padding-top: 100px;
+}
+
 .page-header
 {
-  padding: 25px 0 0 10px;
+  padding: 15px 0 10px;
+  margin: 0 auto 0;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  transition: top .5s ease-out;
+
+  &.headroom--unpinned
+  {
+    top: -105px;
+  }
 
   .logo
   {
@@ -77,6 +102,14 @@
   }
 }
 
+.dropdown
+{
+  &.menu
+  {
+    float: right;
+  }
+}
+
 .dropdown.menu>li.is-dropdown-submenu-parent>a::after
 {
   content:'';
@@ -88,8 +121,10 @@
   border: none;
 }
 
-.is-dropdown-submenu
+.dropdown.menu>li.opens-right>.is-dropdown-submenu
 {
+  right: 0;
+  left: 15px;
   min-width: 120px;
   text-align: left;
 }
@@ -116,7 +151,7 @@
   {
     color: $text-color;
     font-size: 20px;
-    max-width: 690px;
+    max-width: 700px;
   }
 }
 
@@ -135,7 +170,7 @@
   .title-content
   {
     font-size: 16px;
-    max-width: 800px;
+    max-width: 805px;
     color: $text-color;
   }
 }
@@ -188,10 +223,10 @@
     .thumbnail-text
     {
       margin: 0 0 110px 0;
-      padding: 0 25px;
+      padding: 0 20px;
       color: $text-color;
       font-size: 16px;
-      max-width: 260px;
+      max-width: 255px;
       text-align: left;
     }
 
@@ -216,8 +251,8 @@
   margin: 40px 0;
   width: 100%;
 
-  &.button:hover,
-  &.button:focus
+  &:hover,
+  &:focus
   {
     background: $button-color;
   }
@@ -227,8 +262,8 @@
     color: $button-color;
     font-weight: bold;
 
-    &.link-button:hover,
-    &.link-button:focus
+    &:hover,
+    &:focus
     {
       color: white;
     }
@@ -299,8 +334,8 @@
     .link-system
     {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
     }
@@ -392,7 +427,7 @@
       font-size: 14px;
       font-style: italic;
       text-align: left;
-      max-width: 280px;
+      max-width: 270px;
     }
 
     .smi-video
@@ -405,11 +440,17 @@
         border-radius: 5px;
       }
 
-      .play-icon
+      .play-icon,
+      .play-icon-hover
       {
         position: absolute;
         right: 10px;
         bottom: 10px;
+      }
+
+      .play-icon-hover
+      {
+        display: none;
       }
 
       .smi-link
@@ -419,14 +460,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        color: transparent;
-
-        &.smi-link:hover,
-        &.smi-link:focus,
-        &.smi-link:active
-        {
-          color: transparent;
-        }
       }
     }
   }
@@ -478,10 +511,11 @@
     .contact-info-header
     {
       color: $smi-z-color;
-      padding: 0 0 5% 5%;
+      padding: 1% 0 5% 5%;
       font-size: 20px;
       font-weight: bold;
       text-align: left;
+      max-width: 400px;
     }
 
     .contact-info-content
