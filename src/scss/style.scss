@@ -59,7 +59,7 @@ h3
   {
     &.headroom--pinned
     {
-      box-shadow: 0 0 6px rgba(124,133,149,0.7);
+      box-shadow: 0 0 7.5px rgba(124,133,149,0.7);
     }
   }
 
@@ -352,6 +352,12 @@ h3
 
 .volgatech
 {
+  .column
+  {
+    padding-left: 1.35rem;
+    padding-right: 1.35rem;
+  }
+
   .thumbnail
   {
     width: 100%;
