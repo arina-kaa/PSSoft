@@ -77,10 +77,15 @@ h3
     }
   }
 
+  .logo-image
+  {
+    float: left;
+  }
+
   .link-text
   {
     max-width: 340px;
-    float: right;
+    float: left;
     text-align: left;
     padding: 20px 0 0 10px;
     color: $text-color-z;
@@ -106,6 +111,23 @@ h3
     {
       color: $text-color;
       outline: none;
+    }
+
+    .menu-small
+    {
+      font-size: 30px;
+      color: rgba(124,133,149, 0.4);
+      display: none;
+
+      .header
+      {
+        font-size: 16px;
+        color: $text-color;
+        font-weight: normal;
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 11px;
+      }
     }
   }
 }
