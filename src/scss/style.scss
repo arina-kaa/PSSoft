@@ -207,6 +207,11 @@ h3
 
 .companies
 {
+  .column-bottom-comp
+   {
+     display: none;
+   }
+
   .thumbnail
   {
     max-height: 330px;
@@ -510,6 +515,11 @@ h3
   &.button
   {
     margin: 40px 0 50px;
+  }
+
+  .mobile-video-button
+  {
+    display: none;
   }
 }
 
