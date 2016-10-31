@@ -6,8 +6,6 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/media-screen.css" />
-        <link rel="stylesheet" type="text/css" href="../bower_components/foundation-icon-fonts/foundation-icons.css" />
-        <link rel="stylesheet" type="text/css" href="../bower_components/foundation-icon-fonts/foundation-icons.svg" />
         <script src="https://vk.com/js/api/openapi.js?133" type="text/javascript"></script>
         <title>Ассоциация IT-компаний &laquo;ПС СОФТ&raquo;</title>
     </head>
@@ -264,7 +262,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column mobile-video-hidden">
                     <div data-equalizer-watch>
                         <div class="header">Высшая школа программирования</div>
                         <div class="smi-row"></div>
@@ -285,7 +283,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column mobile-video-hidden">
                     <div data-equalizer-watch>
                         <div class="header">Программа "Провинция" об IT в Марий Эл</div>
                         <div class="smi-row"></div>
@@ -306,7 +304,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column mobile-video-hidden">
                     <div data-equalizer-watch>
                         <div class="header">День программиста в Йошкар-Оле</div>
                         <div class="smi-row"></div>
@@ -327,7 +325,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column mobile-video-hidden">
                     <div data-equalizer-watch>
                         <div class="header">Первое IT-сентября в Йошкар-Оле</div>
                         <div class="smi-row"></div>
@@ -348,11 +346,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="column mobile-video-button">
-                    <div class="small-6 small-centered columns smi ">
-                        <a href="#" class="button link-button">Все новости</a>
-                    </div>
-                </div>
                 <div class="column" id="mobile-video-last">
                     <div class="header">Следите за новостями в социальных сетях</div>
                     <div class="smi-row"></div>
@@ -364,9 +357,14 @@
                         VK.Widgets.Group("vk_groups", {mode: 3, width: "330", height: "400", color1: 'FFFFFF', color2: '000000', color3: '5E81A8'}, 48245596);
                     </script>
                 </div>
+                <div class="column" id="mobile-video-button-block">
+                    <div class="small-6 small-centered columns smi ">
+                        <a class="button link-button" id="mobile-video-button">Все новости</a>
+                    </div>
+                </div>
             </div>
             <div class="clear"></div>
-            <div class="row">
+            <div class="row" id="video-button">
                 <div class="large-2 medium-4 small-5 small-centered columns smi ">
                     <a href="#" class="button link-button">Все новости</a>
                 </div>

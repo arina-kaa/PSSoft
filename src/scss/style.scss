@@ -1,4 +1,5 @@
 @import "../../bower_components/foundation-sites/dist/foundation";
+@import "../../bower_components/foundation-icon-fonts/foundation-icons.scss";
 @import "config";
 
 *
@@ -517,10 +518,15 @@ h3
     margin: 40px 0 50px;
   }
 
-  .mobile-video-button
+  #mobile-video-button-block
   {
     display: none;
   }
+
+  /*.mobile-video-hidden
+  {
+    display: none;
+  }*/
 }
 
 .is-reveal-open
