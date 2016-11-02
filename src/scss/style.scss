@@ -26,6 +26,11 @@ h3
   font-family: 'Roboto', sans-serif;
 }
 
+.fixed
+{
+  overflow: hidden;
+}
+
 .container,
 .first-container
 {
@@ -67,14 +72,17 @@ h3
   .logo
   {
     position: relative;
+    width: 470px;
+    float: left;
+    padding-left: 16px;
 
     .logo-link
     {
       position: absolute;
-      left: 15px;
+      left: 0;
       top: 0;
       height: 100%;
-      width: 94%;
+      width: 100%;
     }
   }
 
@@ -104,30 +112,40 @@ h3
     }
   }
 
+  .menu-small
+  {
+    font-size: 30px;
+    color: rgba(124,133,149, 0.4);
+    display: none;
+
+    .header
+    {
+      font-size: 16px;
+      color: $text-color;
+      font-weight: normal;
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 11px;
+    }
+  }
+
   .main-menu
   {
     margin-top: 25px;
 
-    .main-menu-color
+    .main-menu-color,
+    .drop-main-menu-color
     {
       color: $text-color;
       outline: none;
     }
 
-    .menu-small
+    .menu-item:hover,
+    .menu-item:focus
     {
-      font-size: 30px;
-      color: rgba(124,133,149, 0.4);
-      display: none;
-
-      .header
+      .main-menu-color
       {
-        font-size: 16px;
-        color: $text-color;
-        font-weight: normal;
-        display: inline-block;
-        vertical-align: top;
-        padding-top: 11px;
+        color: $text-color-z;
       }
     }
   }
@@ -160,7 +178,7 @@ h3
   text-align: left;
 }
 
-.drop-menu:hover
+.drop-menu-item:hover
 {
   background-color: #f5f4f4;
 }
@@ -480,6 +498,7 @@ h3
       .video-picture
       {
         border-radius: 5px;
+        width: 100%;
       }
 
       .play-icon

@@ -4,10 +4,12 @@ $(document).ready(function(){
     InsertReversedLink();
     OpenCompanies();
     MobileVideo();
+    MobileMenu();
 });
 
 $(window).resize(function(){
     MobileVideo();
+    MobileMenu();
 });
 
 function InitHeadroom(){
@@ -44,7 +46,7 @@ function OpenCompanies(){
 
 function MobileVideo(){
     var width = $( window ).width();
-    if (width < 640) {
+    if (width < 623) {
         $("#mobile-video-last").before($("#mobile-video-button-block"));
         $("#mobile-video-button-block").css("display", "block");
         $("#video-button").css("display", "none");
@@ -70,5 +72,26 @@ function MobileVideo(){
         $("#mobile-video-button-block").before($("#mobile-video-last"));
         $("#mobile-video-button-block").css("display", "none");
         $("#video-button").css("display", "block");
+    }
+}
+
+function MobileMenu(){
+    var width = $( window ).width();
+    var visible = false;
+    if (width <= 990) {
+        $("#menu-small").click(function(){
+            if (visible){
+                $(".dropdown.menu").css("display", "none");
+                $(".menu-item").css("display", "none");
+                visible = false;
+                $("html").toggleClass("fixed", visible);
+            }
+            else {
+                $(".dropdown.menu").css("display", "block");
+                $(".menu-item").css("display", "block");
+                visible = true;
+                $("html").toggleClass("fixed", visible);
+            }
+        })
     }
 }
