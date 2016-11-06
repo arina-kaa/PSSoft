@@ -233,12 +233,11 @@ h3
 
   .thumbnail
   {
-    max-height: 330px;
     margin-bottom: 40px;
     border-radius: 3px;
     position: relative;
     border: 0;
-    padding: 4px;
+    padding: 4px 4px 110px;
 
     &:focus,
     &:hover
@@ -249,8 +248,8 @@ h3
     .logo-comp
     {
       text-align: left;
-      margin: 60px 0 30px 0;
-      padding: 0 25px;
+      margin: 45px 0 30px 0;
+      padding: 15px 25px 0;
 
       .ct-logo
       {
@@ -272,11 +271,11 @@ h3
     .logo-ispring
     {
       margin: 45px 0 20px 0;
+      padding-top: 0;
     }
 
     .thumbnail-text
     {
-      margin: 0 0 110px 0;
       padding: 0 20px;
       color: $text-color;
       font-size: 16px;
@@ -337,7 +336,8 @@ h3
   {
     position: relative;
     border: 0;
-    padding: 4px;
+    padding: 4px 4px 80px;
+    margin-bottom: 40px;
 
     &:focus,
     &:hover
@@ -398,18 +398,20 @@ h3
 
 .volgatech
 {
+  padding: 0 1.3rem;
+
   .column
   {
-    padding-left: 1.35rem;
-    padding-right: 1.35rem;
+    padding: 0;
   }
 
   .thumbnail
   {
-    width: 100%;
     margin-bottom: 60px;
     border-radius: 3px;
     position: relative;
+    padding: 8% 0 8% 8%;
+    width: 100%;
 
     &:focus,
     &:hover
@@ -419,14 +421,16 @@ h3
 
     .logo-volgatech
     {
+      width: 30%;
       display: block;
       float: left;
-      padding: 8% 6%;
+      padding: 0 8% 0 0;
     }
 
     .volgatech-text
     {
-      padding: 7% 0 7% 30%;
+      width: 70%;
+      float: left;
     }
 
     .volgatech-text-header

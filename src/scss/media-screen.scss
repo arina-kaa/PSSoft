@@ -32,6 +32,35 @@
   }
 }
 
+@media (max-width: 1080px)
+{
+  .companies
+  {
+    .column-bottom-comp
+    {
+      .thumbnail
+      {
+        .logo-comp
+        {
+          margin: 30px 0 27px;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1025px)
+{
+  .companies
+  {
+    .third-comp
+    {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 920px)
 {
   .page-header
@@ -50,6 +79,47 @@
         .content
         {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 865px)
+{
+  .system
+  {
+    padding: 0 1.3rem;
+
+    .column
+    {
+      width: 100%;
+      padding: 0;
+
+      .thumbnail
+      {
+        width: 100%;
+        padding: 40px 4px;
+        margin-bottom: 20px;
+
+        .logo-system
+        {
+          float: left;
+          width: 30%;
+          margin: 0;
+        }
+
+        .system-text-width
+        {
+          float: left;
+          width: 70%;
+
+          .thumbnail-text
+          {
+            max-width: 100%;
+            padding-top: 0;
+            margin: 0;
+          }
         }
       }
     }
@@ -91,8 +161,123 @@
   }
 }
 
+@media (max-width: 830px)
+{
+  .system
+  {
+    .column
+    {
+      .thumbnail
+      {
+        .logo-system
+        {
+          width: 35%;
+        }
+
+        .system-text-width
+        {
+          width: 65%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 725px)
+{
+  .system
+  {
+    .column
+    {
+      .thumbnail
+      {
+        .logo-system
+        {
+          width: 40%;
+        }
+
+        .system-text-width
+        {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 640px)
 {
+  .companies
+  {
+    .second-comp
+    {
+      display: none;
+    }
+  }
+
+  .system
+  {
+    .column
+    {
+      .thumbnail
+      {
+        .logo-system
+        {
+          width: 100%;
+          float: none;
+        }
+
+        .system-text-width
+        {
+          width: 100%;
+          float: none;
+
+          .thumbnail-text
+          {
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .volgatech
+  {
+    .column
+    {
+      padding: 0;
+    }
+
+    .thumbnail {
+      margin-bottom: 60px;
+      position: relative;
+      padding: 8% 0 8% 8%;
+      width: 100%;
+
+      .logo-volgatech {
+        width: 30%;
+        display: block;
+        float: none;
+        padding: 0 8% 0 0;
+      }
+
+      .volgatech-text {
+        width: 100%;
+        float: none;
+        padding-top: 20px;
+      }
+
+      .volgatech-text-header {
+        line-height: initial;
+        max-width: 450px;
+      }
+
+      .volgatech-text-content {
+        max-width: 450px;
+      }
+    }
+  }
+
   .mobile-video-hidden
   {
     display: none;

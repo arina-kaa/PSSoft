@@ -3,11 +3,13 @@ $(document).ready(function(){
     InitHeadroom();
     InsertReversedLink();
     OpenCompanies();
+    SystemQuantity()
     MobileVideo();
     MobileMenu();
 });
 
 $(window).resize(function(){
+    SystemQuantity()
     MobileVideo();
     MobileMenu();
 });
@@ -26,12 +28,19 @@ function InsertReversedLink(){
 
 function OpenCompanies(){
     var visible = false;
+    var width = $( window ).width();
     $("#button-comp").click(function(){
         if (visible){
             $("#button-comp").text("Все IT-компании");
             //document.getElementsByClassName('column-bottom-comp').style.display = 'none';
             $(".column-bottom-comp").slideUp("slow");
             //$(".column-bottom-comp").css("display", "none");
+            if (width < 1008) {
+                $(".third-comp").slideUp("slow");
+            }
+            if (width < 623) {
+                $(".second-comp").slideUp("slow");
+            }
             visible = false;
         }
         else {
@@ -39,9 +48,27 @@ function OpenCompanies(){
             //document.getElementsByClassName('column-bottom-comp').style.display = 'block';
             $(".column-bottom-comp").slideDown("slow");
             //$(".column-bottom-comp").css("display", "block");
+            if (width < 1008) {
+                $(".third-comp").slideDown("slow");
+            }
+            if (width < 623) {
+                $(".second-comp").slideDown("slow");
+            }
             visible = true;
         }
     })
+}
+
+function SystemQuantity(){
+    var width = $( window ).width();
+    if (width < 848) {
+        $("#system-quantity").removeClass("medium-up-3");
+        $("#system-quantity").addClass("medium-up-1");
+    }
+    else {
+        $("#system-quantity").removeClass("medium-up-1");
+        $("#system-quantity").addClass("medium-up-3");
+    }
 }
 
 function MobileVideo(){
