@@ -38,9 +38,6 @@ function OpenCompanies(){
             if (width < 1008) {
                 $(".third-comp").slideUp("slow");
             }
-            if (width < 623) {
-                $(".second-comp").slideUp("slow");
-            }
             visible = false;
         }
         else {
@@ -50,9 +47,6 @@ function OpenCompanies(){
             //$(".column-bottom-comp").css("display", "block");
             if (width < 1008) {
                 $(".third-comp").slideDown("slow");
-            }
-            if (width < 623) {
-                $(".second-comp").slideDown("slow");
             }
             visible = true;
         }
@@ -74,6 +68,8 @@ function SystemQuantity(){
 function MobileVideo(){
     var width = $( window ).width();
     if (width < 623) {
+        $(".smi").removeClass("medium-up-2");
+        $(".smi").addClass("medium-up-1");
         $("#mobile-video-last").before($("#mobile-video-button-block"));
         $("#mobile-video-button-block").css("display", "block");
         $("#video-button").css("display", "none");
@@ -96,6 +92,8 @@ function MobileVideo(){
         })
     }
     else {
+        $(".smi").removeClass("medium-up-1");
+        $(".smi").addClass("medium-up-2");
         $("#mobile-video-button-block").before($("#mobile-video-last"));
         $("#mobile-video-button-block").css("display", "none");
         $("#video-button").css("display", "block");
