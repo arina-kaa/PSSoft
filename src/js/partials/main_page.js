@@ -29,7 +29,7 @@ function InsertReversedLink(){
 
 function ShowMore(){
     var width = $( window ).width();
-    if (width < 1008) {
+    if (width <= 1006) {
         $(".third-comp").css("display", "none");
     }
     else {
@@ -40,11 +40,19 @@ function ShowMore(){
         var origText = $(this).data("original-text");
         var activeText = $(this).data("active-text");
         var hiddenBlock = "." + $(this).data("hidden-block");
+        var thirdBlock = hiddenBlock + ":not(.third-comp)";
         $(this).text(origText);
         $(this).click(function(){
             if (visible) {
                 $(this).text(origText);
-                $(hiddenBlock).slideUp("slow");
+                width = $( window ).width();
+                if (width > 1006) {
+                    $(thirdBlock).slideUp("slow");
+                    $(".third-comp").css("display", "block");
+                }
+                else {
+                    $(hiddenBlock).slideUp("slow");
+                }
                 visible = false;
             }
             else {
