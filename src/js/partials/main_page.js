@@ -45,17 +45,11 @@ function ShowMore(){
             if (visible) {
                 $(this).text(origText);
                 $(hiddenBlock).slideUp("slow");
-                if (width < 1008) {
-                    $(".third-comp").slideUp("slow");
-                }
                 visible = false;
             }
             else {
                 $(this).text(activeText);
                 $(hiddenBlock).slideDown("slow");
-                if (width < 1008) {
-                    $(".third-comp").slideDown("slow");
-                }
                 visible = true;
             }
         });
