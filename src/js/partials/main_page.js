@@ -2,14 +2,15 @@ $(document).ready(function(){
     $(document).foundation();
     InitHeadroom();
     InsertReversedLink();
-    OpenCompanies();
-    SystemQuantity()
+    SystemQuantity();
+    ShowMore();
     MobileVideo();
     MobileMenu();
 });
 
 $(window).resize(function(){
-    SystemQuantity()
+    SystemQuantity();
+    ShowMore();
     MobileVideo();
     MobileMenu();
 });
@@ -26,12 +27,46 @@ function InsertReversedLink(){
     link.attr('href', 'mailto:' + emailE);
 }
 
-function OpenCompanies(){
+function ShowMore(){
+    var width = $( window ).width();
+    if (width < 1008) {
+        $(".third-comp").css("display", "none");
+    }
+    else {
+        $(".third-comp").css("display", "block");
+    }
+    $(".js-showmore").each(function(){
+        var visible = false;
+        var origText = $(this).data("original-text");
+        var activeText = $(this).data("active-text");
+        var hiddenBlock = "." + $(this).data("hidden-block");
+        $(this).text(origText);
+        $(this).click(function(){
+            if (visible) {
+                $(this).text(origText);
+                $(hiddenBlock).slideUp("slow");
+                if (width < 1008) {
+                    $(".third-comp").slideUp("slow");
+                }
+                visible = false;
+            }
+            else {
+                $(this).text(activeText);
+                $(hiddenBlock).slideDown("slow");
+                if (width < 1008) {
+                    $(".third-comp").slideDown("slow");
+                }
+                visible = true;
+            }
+        });
+    });
+}
+
+/* function OpenCompanies(){
     var visible = false;
     var width = $( window ).width();
     $("#button-comp").click(function(){
         if (visible){
-            $("#button-comp").text("Все IT-компании");
             //document.getElementsByClassName('column-bottom-comp').style.display = 'none';
             $(".column-bottom-comp").slideUp("slow");
             //$(".column-bottom-comp").css("display", "none");
@@ -41,7 +76,6 @@ function OpenCompanies(){
             visible = false;
         }
         else {
-            $("#button-comp").text("Скрыть IT-компании");
             //document.getElementsByClassName('column-bottom-comp').style.display = 'block';
             $(".column-bottom-comp").slideDown("slow");
             //$(".column-bottom-comp").css("display", "block");
@@ -51,7 +85,7 @@ function OpenCompanies(){
             visible = true;
         }
     })
-}
+}*/
 
 function SystemQuantity(){
     var width = $( window ).width();
@@ -70,33 +104,32 @@ function MobileVideo(){
     if (width < 623) {
         $(".smi").removeClass("medium-up-2");
         $(".smi").addClass("medium-up-1");
+        $(".mobile-video-hidden").css("display", "none");
         $("#mobile-video-last").before($("#mobile-video-button-block"));
         $("#mobile-video-button-block").css("display", "block");
-        $("#video-button").css("display", "none");
-        var visible = false;
+        /* var visible = false;
         $("#mobile-video-button").click(function(){
             if (visible){
-                $("#mobile-video-button").text("Все новости");
                 //document.getElementsByClassName('column-bottom-comp').style.display = 'none';
                 $(".mobile-video-hidden").slideUp("slow");
                 //$(".column-bottom-comp").css("display", "none");
                 visible = false;
             }
             else {
-                $("#mobile-video-button").text("Скрыть новости");
                 //document.getElementsByClassName('column-bottom-comp').style.display = 'block';
                 $(".mobile-video-hidden").slideDown("slow");
                 //$(".column-bottom-comp").css("display", "block");
                 visible = true;
             }
-        })
+        })*/
     }
     else {
         $(".smi").removeClass("medium-up-1");
         $(".smi").addClass("medium-up-2");
         $("#mobile-video-button-block").before($("#mobile-video-last"));
         $("#mobile-video-button-block").css("display", "none");
-        $("#video-button").css("display", "block");
+        $(".mobile-video-hidden").css("display", "block");
+
     }
 }
 
