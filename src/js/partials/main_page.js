@@ -1,16 +1,15 @@
 $(document).ready(function(){
     $(document).foundation();
     InitHeadroom();
-    InsertReversedLink();
-    SystemQuantity();
     ShowMore();
+    SystemQuantity();
     MobileVideo();
     MobileMenu();
+    InsertReversedLink();
 });
 
 $(window).resize(function(){
     SystemQuantity();
-    ShowMore();
     MobileVideo();
     MobileMenu();
 });
@@ -28,66 +27,30 @@ function InsertReversedLink(){
 }
 
 function ShowMore(){
-    var width = $( window ).width();
-    if (width <= 1006) {
-        $(".third-comp").css("display", "none");
-    }
-    else {
-        $(".third-comp").css("display", "block");
-    }
     $(".js-showmore").each(function(){
         var visible = false;
         var origText = $(this).data("original-text");
         var activeText = $(this).data("active-text");
         var hiddenBlock = "." + $(this).data("hidden-block");
-        var thirdBlock = hiddenBlock + ":not(.third-comp)";
         $(this).text(origText);
         $(this).click(function(){
             if (visible) {
                 $(this).text(origText);
-                width = $( window ).width();
-                if (width > 1006) {
-                    $(thirdBlock).slideUp("slow");
-                    $(".third-comp").css("display", "block");
-                }
-                else {
-                    $(hiddenBlock).slideUp("slow");
-                }
+                $(hiddenBlock).each(function(){
+                    $(this).addClass("hidden");
+                });
                 visible = false;
             }
             else {
                 $(this).text(activeText);
-                $(hiddenBlock).slideDown("slow");
+                $(hiddenBlock).each(function(){
+                    $(this).removeClass("hidden");
+                });
                 visible = true;
             }
         });
     });
 }
-
-/* function OpenCompanies(){
-    var visible = false;
-    var width = $( window ).width();
-    $("#button-comp").click(function(){
-        if (visible){
-            //document.getElementsByClassName('column-bottom-comp').style.display = 'none';
-            $(".column-bottom-comp").slideUp("slow");
-            //$(".column-bottom-comp").css("display", "none");
-            if (width < 1008) {
-                $(".third-comp").slideUp("slow");
-            }
-            visible = false;
-        }
-        else {
-            //document.getElementsByClassName('column-bottom-comp').style.display = 'block';
-            $(".column-bottom-comp").slideDown("slow");
-            //$(".column-bottom-comp").css("display", "block");
-            if (width < 1008) {
-                $(".third-comp").slideDown("slow");
-            }
-            visible = true;
-        }
-    })
-}*/
 
 function SystemQuantity(){
     var width = $( window ).width();
@@ -106,32 +69,16 @@ function MobileVideo(){
     if (width < 623) {
         $(".smi").removeClass("medium-up-2");
         $(".smi").addClass("medium-up-1");
-        $(".mobile-video-hidden").css("display", "none");
+        $(".js-hidden-video").addClass("hidden");
         $("#mobile-video-last").before($("#mobile-video-button-block"));
-        $("#mobile-video-button-block").css("display", "block");
-        /* var visible = false;
-        $("#mobile-video-button").click(function(){
-            if (visible){
-                //document.getElementsByClassName('column-bottom-comp').style.display = 'none';
-                $(".mobile-video-hidden").slideUp("slow");
-                //$(".column-bottom-comp").css("display", "none");
-                visible = false;
-            }
-            else {
-                //document.getElementsByClassName('column-bottom-comp').style.display = 'block';
-                $(".mobile-video-hidden").slideDown("slow");
-                //$(".column-bottom-comp").css("display", "block");
-                visible = true;
-            }
-        })*/
+        $("#mobile-video-button-block").removeClass("hidden");
     }
     else {
         $(".smi").removeClass("medium-up-1");
         $(".smi").addClass("medium-up-2");
         $("#mobile-video-button-block").before($("#mobile-video-last"));
-        $("#mobile-video-button-block").css("display", "none");
-        $(".mobile-video-hidden").css("display", "block");
-
+        $("#mobile-video-button-block").addClass("hidden");
+        $(".js-hidden-video").removeClass("hidden");
     }
 }
 
@@ -152,6 +99,6 @@ function MobileMenu(){
                 visible = true;
                 $("html").toggleClass("fixed", visible);
             }
-        })
+        });
     }
 }

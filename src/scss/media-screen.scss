@@ -1,5 +1,4 @@
-@media (max-width: 1080px)
-{
+@media (max-width: 1080px) {
   .first-container
   {
     padding-top: 80px;
@@ -30,10 +29,6 @@
       margin-top: 5px;
     }
   }
-}
-
-@media (max-width: 1080px)
-{
   .companies
   {
     .column-bottom-comp
@@ -50,15 +45,22 @@
   }
 }
 
-@media (max-width: 1023px)
-{
+@media (min-width: 1024px) {
   .companies
   {
     .third-comp
     {
-      display: none;
+      &.hidden
+      {
+        display: block;
+      }
     }
+  }
+}
 
+@media (max-width: 1023px) {
+  .companies
+  {
     .column
     {
       width: 50%;
@@ -78,8 +80,7 @@
   }
 }
 
-@media (max-width: 920px)
-{
+@media (max-width: 920px) {
   .page-header
   {
     .logo
@@ -102,8 +103,7 @@
   }
 }
 
-@media (max-width: 865px)
-{
+@media (max-width: 865px) {
   .system
   {
     padding: 0 1.3rem;
@@ -143,8 +143,7 @@
   }
 }
 
-@media (max-width: 850px)
-{
+@media (max-width: 850px) {
   .page-header
   {
     .menu-small
@@ -178,8 +177,7 @@
   }
 }
 
-@media (max-width: 830px)
-{
+@media (max-width: 830px) {
   .system
   {
     .column
@@ -200,8 +198,7 @@
   }
 }
 
-@media (max-width: 725px)
-{
+@media (max-width: 725px) {
   .system
   {
     .column
@@ -222,8 +219,7 @@
   }
 }
 
-@media (max-width: 640px)
-{
+@media (max-width: 640px) {
   .companies
   {
     .column
@@ -351,16 +347,19 @@
   }
 }
 
-@media (max-width: 639px)
-{
-  .smi {
-    .column {
-      .header {
+@media (max-width: 639px) {
+  .smi
+  {
+    .column
+    {
+      .header
+      {
         padding: 8% 0 0;
         max-width: 100%;
       }
 
-      .content {
+      .content
+      {
         max-width: 100%;
       }
     }

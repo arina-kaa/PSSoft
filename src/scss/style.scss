@@ -1,5 +1,4 @@
 @import "../../bower_components/foundation-sites/dist/foundation";
-@import "../../bower_components/foundation-icon-fonts/foundation-icons.scss";
 @import "config";
 
 *
@@ -29,6 +28,11 @@ h3
 .fixed
 {
   overflow: hidden;
+}
+
+.hidden
+{
+  display: none;
 }
 
 .container,
@@ -65,7 +69,7 @@ h3
   {
     &.headroom--pinned
     {
-      box-shadow: 0 0 7.5px rgba(124,133,149,0.7);
+      box-shadow: 0 0 7.5px rgba(124, 133, 149, 0.7);
     }
   }
 
@@ -115,7 +119,7 @@ h3
   .menu-small
   {
     font-size: 30px;
-    color: rgba(124,133,149, 0.4);
+    color: rgba(124, 133, 149, 0.4);
     display: none;
 
     .header
@@ -159,9 +163,9 @@ h3
   }
 }
 
-.dropdown.menu>li.is-dropdown-submenu-parent>a::after
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after
 {
-  content:'';
+  content: '';
   background: url("../images/arrow-down.png") no-repeat;
   width: 11px;
   height: 6px;
@@ -170,7 +174,7 @@ h3
   border: none;
 }
 
-.dropdown.menu>li.opens-right>.is-dropdown-submenu
+.dropdown.menu > li.opens-right > .is-dropdown-submenu
 {
   right: 0;
   left: 15px;
@@ -183,7 +187,7 @@ h3
   background-color: #f5f4f4;
 }
 
-.main-title,.title
+.main-title, .title
 {
   color: $text-color-z;
   margin: 100px auto 50px;
@@ -230,11 +234,6 @@ h3
 
 .companies
 {
-  .column-bottom-comp
-   {
-     display: none;
-   }
-
   .thumbnail
   {
     margin-bottom: 40px;
@@ -246,7 +245,7 @@ h3
     &:focus,
     &:hover
     {
-      box-shadow: 0 0 6px 1px rgba(124,133,149,.5);
+      box-shadow: 0 0 6px 1px rgba(124, 133, 149, .5);
     }
 
     .logo-comp
@@ -346,7 +345,7 @@ h3
     &:focus,
     &:hover
     {
-      box-shadow: 0 0 6px 1px rgba(124,133,149,.5);
+      box-shadow: 0 0 6px 1px rgba(124, 133, 149, .5);
     }
 
     .logo-system
@@ -430,7 +429,7 @@ h3
     &:focus,
     &:hover
     {
-      box-shadow: 0 0 6px 1px rgba(124,133,149,.5);
+      box-shadow: 0 0 6px 1px rgba(124, 133, 149, .5);
     }
 
     .logo-volgatech
@@ -555,16 +554,6 @@ h3
   {
     margin: 40px 0 50px;
   }
-
-  #mobile-video-button-block
-  {
-    display: none;
-  }
-
-  /*.mobile-video-hidden
-  {
-    display: none;
-  }*/
 }
 
 .is-reveal-open
@@ -574,7 +563,7 @@ h3
 
 .reveal-overlay
 {
-  background-color: rgba(255,255,255,.70);
+  background-color: rgba(255, 255, 255, .70);
 }
 
 .reveal
