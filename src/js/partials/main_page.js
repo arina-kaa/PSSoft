@@ -88,15 +88,13 @@ function MobileMenu(){
     if (width <= 990) {
         $("#menu-small").click(function(){
             if (visible){
-                $(".dropdown.menu").css("display", "none");
-                $(".menu-item").css("display", "none");
+                $(".dropdown.menu").removeClass("opened-menu");
                 visible = false;
                 $("html").toggleClass("fixed", visible);
                 $("body").toggleClass("fixed", visible);
             }
             else {
-                $(".dropdown.menu").css("display", "block");
-                $(".menu-item").css("display", "block");
+                $(".dropdown.menu").addClass("opened-menu");
                 visible = true;
                 $("html").toggleClass("fixed", visible);
                 $("body").toggleClass("fixed", visible);
