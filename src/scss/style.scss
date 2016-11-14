@@ -33,6 +33,13 @@ h3
 .hidden
 {
   display: none;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.transition-animate
+{
+
 }
 
 .container,
