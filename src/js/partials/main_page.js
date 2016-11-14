@@ -92,12 +92,14 @@ function MobileMenu(){
                 $(".menu-item").css("display", "none");
                 visible = false;
                 $("html").toggleClass("fixed", visible);
+                $("body").toggleClass("fixed", visible);
             }
             else {
                 $(".dropdown.menu").css("display", "block");
                 $(".menu-item").css("display", "block");
                 visible = true;
                 $("html").toggleClass("fixed", visible);
+                $("body").toggleClass("fixed", visible);
             }
         });
     }
