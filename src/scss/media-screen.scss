@@ -61,6 +61,20 @@
 @media (max-width: 1023px) {
   .companies
   {
+    .js-hidden-comp
+    {
+      &.hidden
+      {
+        &.third-comp
+        {
+          opacity: 0;
+          height: 0;
+          overflow: hidden;
+          display: block;
+        }
+      }
+    }
+
     .column
     {
       width: 50%;
@@ -152,6 +166,18 @@
       float: right;
     }
 
+    .dropdown.menu > li.is-dropdown-submenu-parent > a::after
+    {
+      right: 40%;
+    }
+
+    .dropdown.menu > li.opens-right > .is-dropdown-submenu
+    {
+      right: 0;
+      left: 0;
+      text-align: center;
+    }
+
     .main-menu
     {
       .dropdown
@@ -163,13 +189,13 @@
           height: 100%;
           position: fixed;
           background: white;
-          top: 68px;
+          top: 75px;
 
           .menu-item,
           .drop-menu-item
           {
             margin: 0 auto;
-            padding: 5px 0;
+            padding: 10px 0;
             display: block;
           }
         }
@@ -366,6 +392,20 @@
     {
       width: 100%;
       height: 60%;
+    }
+  }
+
+  .smi
+  {
+    .js-hidden-video
+    {
+      &.hidden
+      {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        display: block;
+      }
     }
   }
 }

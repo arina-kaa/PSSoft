@@ -37,7 +37,7 @@ h3
 
 .transition-animate
 {
-  transition: all 0.5s ease-out;
+  transition: all .5s ease-out;
 }
 
 .container,
@@ -125,7 +125,6 @@ h3
   {
     color: rgba(124, 133, 149, 0.4);
     display: none;
-    padding: .7rem 1rem;
     cursor: pointer;
 
     .header
@@ -134,7 +133,8 @@ h3
       color: $text-color;
       font-weight: normal;
       display: inline-block;
-      vertical-align: top;
+      padding: .5rem 1rem;
+      float: left;
     }
   }
 
@@ -190,9 +190,11 @@ h3
 .drop-menu-item:hover
 {
   background-color: #f5f4f4;
+  transition: all .3s ease-out;
 }
 
-.main-title, .title
+.main-title,
+.title
 {
   color: $text-color-z;
   margin: 100px auto 50px;
@@ -239,6 +241,24 @@ h3
 
 .companies
 {
+  .js-hidden-comp
+  {
+    &.hidden
+    {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      display: block;
+
+      &.third-comp
+      {
+        opacity: 1;
+        height: auto;
+        overflow: visible;
+      }
+    }
+  }
+
   .thumbnail
   {
     margin-bottom: 40px;

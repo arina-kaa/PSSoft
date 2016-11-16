@@ -1,0 +1,41 @@
+@import "config";
+
+.hamburger
+{
+  float: left;
+  padding-right: 1rem;
+}
+
+.hamburger .line
+{
+  width: 40px;
+  height: 3px;
+  background-color: $text-color;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover
+{
+  cursor: pointer;
+}
+
+/* ONE */
+
+#hamburger-1.is-active .line:nth-child(2)
+{
+  opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1)
+{
+  transform: translateY(11px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3)
+{
+  transform: translateY(-11px) rotate(-45deg);
+}

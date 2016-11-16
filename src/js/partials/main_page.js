@@ -90,12 +90,14 @@ function MobileMenu(){
             if (visible){
                 $(".dropdown.menu").removeClass("opened-menu");
                 visible = false;
+                $(".hamburger").toggleClass("is-active", visible);
                 $("html").toggleClass("fixed", visible);
                 $("body").toggleClass("fixed", visible);
             }
             else {
                 $(".dropdown.menu").addClass("opened-menu");
                 visible = true;
+                $(".hamburger").toggleClass("is-active", visible);
                 $("html").toggleClass("fixed", visible);
                 $("body").toggleClass("fixed", visible);
             }
