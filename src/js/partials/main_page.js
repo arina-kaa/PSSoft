@@ -85,6 +85,7 @@ function MobileVideo(){
 function MobileMenu(){
     var width = $( window ).width();
     var visible = false;
+    var visibleSubmenu = false;
     if (width <= 990) {
         $("#menu-small").click(function(){
             if (visible){
@@ -100,6 +101,18 @@ function MobileMenu(){
                 $(".hamburger").toggleClass("is-active", visible);
                 $("html").toggleClass("fixed", visible);
                 $("body").toggleClass("fixed", visible);
+            }
+        });
+        $(".is-dropdown-submenu").addClass("transition-animate");
+        $(".is-dropdown-submenu").addClass("hidden");
+        $(".is-dropdown-submenu-parent").click(function () {
+            if (visibleSubmenu) {
+                visibleSubmenu = false;
+                $(".is-dropdown-submenu").addClass("hidden");
+            }
+            else {
+                visibleSubmenu = true;
+                $(".is-dropdown-submenu").removeClass("hidden");
             }
         });
     }
