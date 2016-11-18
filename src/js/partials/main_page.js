@@ -103,7 +103,6 @@ function MobileMenu(){
                 $("body").toggleClass("fixed", visible);
             }
         });
-        $(".is-dropdown-submenu").addClass("transition-animate");
         $(".is-dropdown-submenu").addClass("hidden");
         $(".is-dropdown-submenu-parent").click(function () {
             if (visibleSubmenu) {

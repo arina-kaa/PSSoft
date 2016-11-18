@@ -171,12 +171,20 @@
       right: 40%;
     }
 
-    .dropdown.menu > li.opens-right > .is-dropdown-submenu
+    .is-dropdown-submenu
     {
-      right: 0;
       left: 0;
+      top: 10px;
       text-align: center;
       position: relative;
+      display: block;
+      border: 1px solid #cacaca;
+      border-radius: 0;
+      box-shadow: none;
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all .3s ease;
 
       &.hidden
       {
