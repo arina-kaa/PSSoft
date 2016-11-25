@@ -9,9 +9,12 @@ $(document).ready(function(){
 });
 
 $(window).resize(function(){
-    SystemQuantity();
-    MobileVideo();
-    MobileMenu();
+    clearTimeout(window.resizedFinished);
+    window.resizedFinished = setTimeout(function(){
+        SystemQuantity();
+        MobileVideo();
+        MobileMenu();
+    }, 500); /* таймаут */
 });
 
 function InitHeadroom(){
@@ -19,11 +22,11 @@ function InitHeadroom(){
 }
 
 function InsertReversedLink(){
-    var emailE = ('info' + '@' + 'institutps' + '.ru');
-    var link = $("#reversedLink");
-
-    link.html(emailE);
-    link.attr('href', 'mailto:' + emailE);
+    $(".reversedLink").each(function(){
+        var email = $(this).data("main-post-part") + "@" + $(this).data("last-post-part");
+        $(this).html(email);
+        $(this).attr('href', 'mailto:' + email);
+    });
 }
 
 function ShowMore(){
@@ -53,8 +56,7 @@ function ShowMore(){
 }
 
 function SystemQuantity(){
-    var width = $( window ).width();
-    if (width < 848) {
+    if (($( window ).width()) < (865 - 17)) {
         $("#system-quantity").removeClass("medium-up-3");
         $("#system-quantity").addClass("medium-up-1");
     }
@@ -66,7 +68,7 @@ function SystemQuantity(){
 
 function MobileVideo(){
     var width = $( window ).width();
-    if (width < 623) {
+    if (($( window ).width()) < (640 - 17)) {
         $(".smi").removeClass("medium-up-2");
         $(".smi").addClass("medium-up-1");
         $(".js-hidden-video").addClass("hidden");
@@ -83,10 +85,9 @@ function MobileVideo(){
 }
 
 function MobileMenu(){
-    var width = $( window ).width();
     var visible = false;
     var visibleSubmenu = false;
-    if (width <= 990) {
+    if (($( window ).width()) <= (1007 - 17)) {
         $("#menu-small").click(function(){
             if (visible){
                 $(".dropdown.menu").removeClass("opened-menu");
