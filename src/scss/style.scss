@@ -367,7 +367,7 @@ h3
   border: 2px solid $button-color;
   border-radius: 30px;
   margin: 40px 0;
-  width: 100%;
+  padding: .85em 2em;
 
   &:hover,
   &:focus
@@ -668,7 +668,6 @@ h3
   .contact-info
   {
     margin: 20px 0 0;
-    border-left: 2px $smi-row-color solid;
 
     .contact-info-header
     {
@@ -678,6 +677,7 @@ h3
       font-weight: bold;
       text-align: left;
       max-width: 400px;
+      border-left: 2px $smi-row-color solid;
     }
 
     .contact-info-content
@@ -686,6 +686,7 @@ h3
       text-align: left;
       padding: 0 0 0 5%;
       color: $text-color;
+      border-left: 2px $smi-row-color solid;
 
       .number
       {
@@ -695,6 +696,14 @@ h3
     }
 
     .column:last-child:not(:first-child), .columns:last-child:not(:first-child)
+    {
+      float: left;
+    }
+  }
+
+  .button
+  {
+    &.link-button
     {
       float: left;
     }
